@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover - Monoloque Thrift</title>
+   
+ <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #e9e3b5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            color: #067b68;
+        }
+
+        hr {
+            border: none;
+            border-top: 2px solid #067b68;
+            max-width: 300px;
+            margin: 30px auto;
+        }
+
+        /* Navigation Styles */
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            background-color: #067b68;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 15px 30px;
+            color: #ffce80;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #06594b;
+        }
+
+        /* Sections */
+        section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        #home {
+            background-color: #fdf9e5;
+        }
+
+        #discover {
+            background-color: #f7f3e9;
+            display: none;
+        }
+
+        /* Branches List */
+        ul.branches {
+            list-style: none;
+            padding: 0;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        ul.branches li {
+            margin: 10px 0;
+            font-weight: bold;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li a {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Banner -->
+    <img src="imagegroup/banner.png" width="100%" alt="Monoloque Thrift Banner">
+
+    <!-- Navigation Menu -->
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showSection('home')">HOME</a></li>
+            <li><a href="#" onclick="showSection('discover')">DISCOVER</a></li>
+            <li><a href="#">SHOP</a></li>
+            <li><a href="#">SELL</a></li>
+            <li><a href="#">EDUCATE</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h1>Welcome to Monoloque Thrift</h1>
+        <p>
+            At <strong>Monoloque Thrift</strong>, we bring you affordable, pre-loved fashion that combines style and sustainability. 
+            Explore unique pieces that suit your taste and contribute to a greener world!
+        </p>
+        <hr>
+        <p>Navigate to the "DISCOVER" section to learn more about who we are.</p>
+    </section>
+
+    <!-- Discover Section -->
+    <section id="discover">
+        <h2>About Us</h2>
+        <p>
+            Welcome to <strong>Monoloque Thrift</strong>, where fashion meets affordability! 
+            We specialize in curating quality pre-loved clothing for all ages and styles. 
+            Whether you're looking for trendy pieces or timeless classics, we've got something for everyone.
+        </p>
+        <hr>
+
+</body>
+</html>
