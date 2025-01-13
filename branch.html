@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Monoloque Thrift, offering sustainable fashion and unique finds across branches in Kuala Lumpur, Selangor, and Pulau Pinang.">
+    <meta name="keywords" content="thrift store, sustainable fashion, eco-friendly shopping, Monoloque, branches, Kuala Lumpur, Selangor, Pulau Pinang">
+    <meta name="author" content="Monoloque Thrift">
+    <title>Branches - Monoloque Thrift</title>
+    <style>
+        /* General Styles */
+        body {
+            background: #f3e8d3;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            color: #3e2a47;
+            transition: background-color 0.5s ease, color 0.3s ease;
+        }
+
+        header {
+            background: #8e6a3d;
+            padding: 20px;
+            color: white;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+ nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #5b3e3a; 
+            padding: 20px 10px;
+            position: relative;
+            z-index: 10;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+        }
+
+        nav ul li {
+            position: relative;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-family: Arial, sans-serif;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #d2a96d; 
+            transform: translateY(-3px);  
+        }
+
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            background-color: #e0b8a0; 
+            padding: 10px 0;
+            border-radius: 5px;
+            top: 40px;
+            list-style-type: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 200px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        nav ul li ul li a {
+            padding: 10px 20px;
+            display: block;
+            color: #5b3e3a; 
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li ul li a:hover {
+            background-color: #8e6a3d; 
+            color: white;
+        }
+
+        nav ul li:hover > ul {
+            display: block;
+            opacity: 1;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            margin: 20px;
+        }
+
+        .dropdown button {
+            background-color: #8e6a3d;
+            color: white;
+            padding: 15px 32px;
+            font-size: 1.2rem;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .dropdown button:hover {
+            background-color: #d2a96d;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff7e1;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            min-width: 250px;
+            z-index: 1;
+            left: 0;
+            padding: 10px;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            text-decoration: none;
+            color: #3e2a47;
+            padding: 10px;
+            display: block;
+            font-size: 1.1rem;
+            transition: background 0.3s ease;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #8e6a3d;
+            color: white;
+        }
+
+        .branch-section {
+            margin-top: 30px;
+            padding: 20px;
+            background: #B6A28E;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .branch-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #8e6a3d;
+        }
+
+        .branch-card {
+            background: #fff7e1;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .branch-card:hover {
+            transform: scale(1.05);
+        }
+
+        .branch-card img {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .branch-card h3 {
+            font-size: 2rem;
+            color: #8e6a3d;
+            margin-bottom: 10px;
+        }
+
+        .branch-card p {
+            font-size: 1.1rem;
+            color: #3e2a47;
+            line-height: 1.5;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding: 20px 0;
+            background: #6b4f31;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        footer a {
+            color: #ffbf57;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+            color: #ffbf57;
+        }
+
+
+        @media (max-width: 768px) {
+            .branch-card {
+                padding: 15px;
+            }
+
+            .branch-card h3 {
+                font-size: 1.8rem;
+            }
+
+            .dropdown button {
+                font-size: 1rem;
+                padding: 12px 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<img src="imagegroup/branch.png" width="100%" alt="Monoloque Thrift Branches">
+<a href="index.html"><img src="imagegrouping/home.png" width="10%" length="10%" align="left" alt="Home"></a>
+
+    <div class="dropdown">
+        <button>Monoloque Branches</button>
+        <div class="dropdown-content">
+            <a href="#kl">Kuala Lumpur (MAIN)</a>
+            <a href="#selangor">Selangor</a>
+            <a href="#pulaupinang">Pulau Pinang</a>
+        </div>
+    </div>
+
+    <!-- Kuala Lumpur Branch Section -->
+    <div class="branch-section" id="kl">
+        <div class="branch-card">
+            <img src="imagegrouping/branch2.jpg" alt="Kuala Lumpur Branch">
+            <h3>Monoloque Thrift Kuala Lumpur (MAIN)</h3>
+            <p>Located in the heart of the city, our Kuala Lumpur branch is easily accessible and offers a wide selection of sustainable fashion. Visit us to discover unique finds at affordable prices.</p>
+            <p><strong>Address:</strong> Floor 6, Suria KLCC, Kuala Lumpur City Centre, Kuala Lumpur, Malaysia</p>
+            <p><strong>Contact:</strong> 04 8264 6630</p>
+        </div>
+    </div>
+
+    <!-- Selangor Branch Section -->
+    <div class="branch-section" id="selangor">
+        <div class="branch-card">
+            <img src="imagegrouping/branch1.jpg" alt="Selangor Branch">
+            <h3>Monoloque Thrift Selangor</h3>
+            <p>Our Selangor branch is nestled in the suburbs, offering a cozy atmosphere and great deals on preloved items. Come visit for a personalized thrifting experience.</p>
+            <p><strong>Address:</strong> F3 12, Mines 2, South KL, Pusat Perdagangan Mines, Jalan Mines 2, Mines Wellness City, 43399 Seri Kembangan, Selangor</p>
+            <p><strong>Contact:</strong> 04 5609 6243</p>
+        </div>
+    </div>
+
+    <!-- Pulau Pinang Branch Section -->
+    <div class="branch-section" id="pulaupinang">
+        <div class="branch-card">
+            <img src="imagegrouping/branch3.jpg" alt="Pulau Pinang Branch">
+            <h3>Monoloque Thrift Pulau Pinang</h3>
+            <p>Our branch in Pulau Pinang offers an eclectic mix of vintage and modern thrifted items. It's the perfect spot to find something unique while supporting sustainability.</p>
+            <p><strong>Address:</strong> Sunway Carnival Mall 3068, Jalan Todak Pusat Bandar Seberang Jaya, Seberang Jaya, 13700 Perai, Pulau Pinang</p>
+            <p><strong>Contact:</strong> 04 9889 2341</p>
+        </div>
+    </div>
+
+
+    <footer>
+        &copy; 2025 Monoloque Thrift. All Rights Reserved. <br>
+        Email: <a href="mailto:monoloquethrift@gmail.com">monoloquethrift@gmail.com</a>
+    </footer>
+
+</body>
+
+</html>
