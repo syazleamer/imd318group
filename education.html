@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education - Monoloque Thrift</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: #f7f4e3;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            color: #4f4a4a;
+            transition: background-color 0.5s ease, color 0.3s ease;
+        }
+
+        h2 {
+            font-size: 3rem;
+            margin: 40px 0;
+            color: #6b4f31;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin: 20px auto;
+            max-width: 800px;
+            color: #555;
+        }
+
+        .education-container {
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 20px;
+            max-width: 1200px;
+        }
+
+        .education-section {
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            color: #333;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeIn 0.8s forwards;
+        }
+
+        .education-section:nth-child(even) {
+            animation-delay: 0.3s;
+        }
+
+        .education-section:nth-child(odd) {
+            animation-delay: 0.5s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .education-section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .education-section img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .education-section h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #6b4f31;
+            font-weight: 600;
+        }
+
+        .education-section p {
+            font-size: 1.1rem;
+            color: #4f4a4a;
+        }
+
+        .education-section a {
+            color: #3a2a2a;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+            margin-top: 10px;
+            display: inline-block;
+        }
+
+        .education-section a:hover {
+            text-decoration: underline;
+            color: #6b4f31;
+        }
+
+        .cta-btn {
+            background-color: #6b4f31;
+            color: white;
+            padding: 12px 24px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+            text-transform: uppercase;
+            margin-top: 20px;
+        }
+
+        .cta-btn:hover {
+            background-color: #5b3e29;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding: 20px 0;
+            background: #6b4f31;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        footer a {
+            color: #ffbf57;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+            color: #ffbf57;
+        }
+
+        @media (max-width: 768px) {
+            .education-section {
+                padding: 15px;
+                text-align: left;
+            }
+
+            .education-container {
+                grid-template-columns: 1fr;
+            }
+
+            h2 {
+                font-size: 2.5rem;
+            }
+        }
+
+        
+        body.dark-mode {
+            background: #333;
+            color: #f7f4e3;
+        }
+
+        body.dark-mode h2 {
+            color: #ffbf57;
+        }
+
+        body.dark-mode .education-section {
+            background: #444;
+            color: #f7f4e3;
+        }
+
+        body.dark-mode footer {
+            background: #444;
+        }
+
+        body.dark-mode footer a {
+            color: #ffbf57;
+        }
+
+        body.dark-mode .cta-btn {
+            background-color: #ffbf57;
+            color: #333;
+        }
+
+        body.dark-mode .education-section h3 {
+            color: #ffbf57;
+        }
+
+        body.dark-mode .education-section p {
+            color: #f7f4e3;
+        }
+
+        
+        .dark-mode-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #6b4f31;
+            color: white;
+            padding: 10px;
+            font-size: 1rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 5%;
+            cursor: pointer;
+            z-index: 100;
+            transition: background-color 0.3s ease;
+        }
+
+        .dark-mode-toggle:hover {
+            background-color: #5b3e29;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<img src="imagegroup/education.png" width="100%" alt="Monoloque Contact">
+<br>
+<a href="index.html"><img src="imagegrouping/home.png" width="10%" length="10%" align="left" alt="Home"></a>
+<br>
+<br>
+<br>
+
+    <!-- Dark Mode Toggle Button (Floating) -->
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+    <div class="education-container">
+        <div class="education-section">
+            <img src="imagegrouping/education1.jpg" alt="Bundle/Thrift/Preloved">
+            <h3>What is Bundle/Thrift/Preloved?</h3>
+            <p>A bundle is a collection of items sold together, usually at a discounted price. Thrift refers to buying second-hand items to save money and reduce waste. Preloved describes second-hand items that were previously owned and cherished.</p>
+        </div>
+
+        <div class="education-section">
+            <img src="imagegrouping/education2.jpg" alt="Tips for Thrifting">
+            <h3>Tips for Thrifting</h3>
+            <p>Keep an eye out for brand names, consider upcycling or repurposing items, haggle if appropriate, check return policies, and follow thrift stores on social media for updates on new arrivals or special sales.</p>
+        </div>
+
+        <div class="education-section">
+            <img src="imagegrouping/education3.jpg" alt="Sustainability Benefits">
+            <h3>Sustainability Benefits</h3>
+            <p>Thrifting helps reduce waste, lowers the demand for fast fashion, and supports the environment by minimizing the carbon footprint of clothing production.</p>
+        </div>
+
+        <div class="education-section">
+            <img src="imagegrouping/education4.jpg" alt="Caring for Preloved Items">
+            <h3>Caring for Preloved Items</h3>
+            <p>Ensure your preloved items last long by washing them with care, storing them properly, and mending small damages when needed.</p>
+        </div>
+
+        <div class="education-section">
+            <img src="imagegrouping/education5.jpg" alt="Key Tips for Creating Effective Bundles">
+            <h3>Key Tips for Creating Effective Bundles</h3>
+            <p>Successful bundles include items that complement each other, offer meaningful discounts, and cater to the target audience's needs.</p>
+        </div>
+
+        <div class="education-section">
+            <img src="imagegrouping/education6.jpg" alt="Start Exploring Bundles Today">
+            <h3>Start Exploring Bundles Today</h3>
+            <p>Discover how bundling can save you time, money, and effort by exploring our exclusive offerings tailored to your needs.</p>
+        </div>
+    </div>
+
+             <footer>
+        &copy; 2025 Monoloque Thrift. All Rights Reserved. <br>
+        Email: <a href="mailto:monoloquethrift@gmail.com">monoloquethrift@gmail.com</a>
+    </footer>
+
+    <script>
+
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+
+</body>
+
+</html>
