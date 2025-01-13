@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Monoloque Thrift</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f3e8d3;
+            color: #3e2a47;
+            padding: 0;
+        }
+
+        header {
+            background: linear-gradient(135deg, #8e6a3d, #5b3e3a);            color: white;
+            padding: 30px 0;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        header h1 {
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+        .contact-container {
+            display: flex;
+            justify-content: space-around;
+            padding: 50px 20px;
+            flex-wrap: wrap; 
+        }
+
+        .contact-info, .contact-form {
+            width: 45%;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .contact-info h3, .contact-form h3 {
+            margin-bottom: 20px;
+            color: #8e6a3d;
+            font-size: 24px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .contact-info p, .contact-form label {
+            margin: 15px 0;
+            font-size: 16px;
+            color: #5b3e3a;
+        }
+
+        .contact-info i {
+            margin-right: 15px;
+            font-size: 24px;
+            color: #8e6a3d;
+        }
+
+        .contact-info a {
+            color: #8e6a3d;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: #d2a96d; 
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 12px 0;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+            background-color: #f7f7f7;
+            transition: border-color 0.3s ease;
+        }
+
+        .contact-form input:focus, .contact-form textarea:focus {
+            border-color: #8e6a3d;
+            outline: none;
+        }
+
+        .contact-form button {
+            background-color: #8e6a3d;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #5b3e3a;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #5b3e3a;
+            color: white;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: #d2a96d; 
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .contact-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-info, .contact-form {
+                width: 90%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<img src="imagegroup/contact.png" width="100%" alt="Monoloque Contact">
+<a href="index.html"><img src="imagegrouping/home.png" width="10%" length="10%" align="left" alt="Home"></a>
+
+    <div class="contact-container">
+       
+        <div class="contact-info">
+            <h3>Contact Information</h3>
+            <p>Email: <a href="mailto:monoloquethrift@gmail.com">monoloquethrift@gmail.com</a></p>
+            <p> Phone: 04 8264 6630 </p>
+            <p> Address: Floor 6, Suria KLCC, Kuala Lumpur City Centre, Kuala Lumpur, Malaysia</p>
+            <p>Instagram: <a href="https://www.instagram.com/monoloque.thrift/" target="_blank">@monoloquethrift</a></p>
+        </div>
+
+        
+        <div class="contact-form">
+            <h3>Get in Touch</h3>
+            <form action="submit_form.php" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="6" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+
+    <footer>
+        &copy; 2025 Monoloque Thrift. All Rights Reserved. <br>
+        Email: <a href="mailto:monoloquethrift@gmail.com">monoloquethrift@gmail.com</a>
+    </footer>
+
+</body>
+</html>
