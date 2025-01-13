@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn how Monoloque Thrift sorts its items into different conditions before selling to ensure transparency and quality.">
+    <title>Condition Guidelines - Monoloque Thrift</title>
+    <style>
+        body {
+            background: #f3e8d3;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #3e2a47;
+            text-align: center;
+        }
+
+        header {
+            background-color: #8e6a3d;
+            color: white;
+            padding: 15px;
+            font-size: 1.5rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            margin: 20px;
+        }
+
+        .dropdown button {
+            background-color: #8e6a3d;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: background 0.3s;
+        }
+
+        .dropdown button:hover {
+            background-color: #d2a96d;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff7e1;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            min-width: 250px;
+            z-index: 1;
+            left: 0;
+            padding: 10px;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            text-decoration: none;
+            color: #3e2a47;
+            padding: 10px;
+            display: block;
+            font-size: 1rem;
+            transition: background 0.3s;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #8e6a3d;
+            color: white;
+        }
+
+        .guideline-section {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            background: #B6A28E;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .guideline-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #8e6a3d;
+            text-transform: uppercase;
+        }
+
+        .guideline-card {
+            background: #fff7e1;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .guideline-card:hover {
+            transform: scale(1.05);
+        }
+
+        .guideline-card h3 {
+            font-size: 1.5rem;
+            color: #8e6a3d;
+            margin-bottom: 10px;
+        }
+
+        .guideline-card p {
+            font-size: 1rem;
+            color: #3e2a47;
+            line-height: 1.5;
+        }
+
+        .guideline-card img {
+            max-width: 150px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            background-color: #8e6a3d;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 1rem;
+            margin-top: 30px;
+        }
+
+        footer a {
+            color: #ffbf57;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        @media (max-width: 768px) {
+            .dropdown button {
+                font-size: 1rem;
+                padding: 12px 20px;
+            }
+
+            .guideline-card {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+  
+
+    <img src="imagegroup/condition.png" width="100%" alt="Condition Guidelines">
+<a href="index.html"><img src="imagegrouping/home.png" width="10%" length="10%" align="left" alt="Home"></a>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+    <div class="dropdown">
+        <button aria-haspopup="true" aria-expanded="false">Condition Guidelines</button>
+        <div class="dropdown-content">
+            <a href="#new-condition">New or Like New</a>
+            <a href="#gently-used">Gently Used</a>
+            <a href="#vintage">Vintage/Pre-loved</a>
+            <a href="#damaged">Damaged</a>
+            <a href="#repairable">Repairable</a>
+        </div>
+    </div>
+
+    <h2>How We Sort Our Items</h2>
+    <p>Your trust is our priority. Learn how we categorize items before they reach your hands!</p>
+
+    <div class="guideline-section" id="new-condition">
+        <div class="guideline-card">
+            <img src="imagegrouping/cond1.jpg" alt="New or Like New">
+            <h3>New or Like New</h3>
+            <p>Items are almost brand new with no visible signs of wear. Perfect for gifting or personal use.</p>
+        </div>
+    </div>
+
+    <div class="guideline-section" id="gently-used">
+        <div class="guideline-card">
+            <img src="imagegrouping/cond2.jpg" alt="Gently Used">
+            <h3>Gently Used</h3>
+            <p>Minimal signs of wear, such as light creasing or small stains. Quality items ready for reuse.</p>
+        </div>
+    </div>
+
+    <div class="guideline-section" id="vintage">
+        <div class="guideline-card">
+            <img src="imagegrouping/cond3.jpg" alt="Vintage">
+            <h3>Vintage/Pre-loved</h3>
+            <p>Unique items with visible wear that add to their character and charm.</p>
+        </div>
+    </div>
+
+    <div class="guideline-section" id="damaged">
+        <div class="guideline-card">
+            <img src="imagegrouping/cond4.jpg" alt="Damaged">
+            <h3>Damaged</h3>
+            <p>Visible damage but suitable for upcycling or crafting. Find creative uses for these gems!</p>
+        </div>
+    </div>
+
+    <div class="guideline-section" id="repairable">
+        <div class="guideline-card">
+            <img src="imagegrouping/cond5.jpg" alt="Repairable">
+            <h3>Repairable</h3>
+            <p>Needs minor fixes like missing buttons or small stitching. Ideal for DIY enthusiasts.</p>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 Monoloque Thrift. All Rights Reserved. <br>
+        Email: <a href="mailto:monoloquethrift@gmail.com">monoloquethrift@gmail.com</a>
+    </footer>
+</body>
+
+</html>
