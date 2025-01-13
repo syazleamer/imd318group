@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trade-In - Monoloque Thrift</title>
+    <style>
+        /* General Styles */
+        body {
+            background: #f3e8d3; 
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            color: #3e2a47;
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin: 20px 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+            color: #8e6a3d; /* Vintage brown */
+            transition: color 0.5s ease;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin: 20px auto;
+            max-width: 800px;
+            transition: color 0.5s ease;
+        }
+
+        
+        .trade-in-process {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 30px auto;
+            max-width: 900px;
+            padding: 20px;
+            background: #fff7e1; 
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.5s ease;
+        }
+
+        .trade-in-process div {
+            width: 30%;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .trade-in-process img {
+            max-width: 100%;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+        }
+
+        
+        @media (max-width: 768px) {
+            .trade-in-process div {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+
+        
+        .trade-in-form {
+            margin: 30px auto;
+            max-width: 900px;
+            padding: 20px;
+            background: #B6A28E; 
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.5s ease;
+        }
+
+        .trade-in-form input,
+        .trade-in-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .trade-in-form button {
+            background: #F5EFE7; 
+            color: #5b3e3a;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .trade-in-form button:hover {
+            background: #5b3e3a; 
+            color: #fff;
+        }
+
+        
+        footer {
+            margin-top: 30px;
+            padding: 15px 0;
+            background: #5b3e3a; 
+            color: white;
+            font-size: 0.9rem;
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+
+        footer a {
+            color: #d2a96d; 
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+            color: #d2a96d;
+        }
+
+        /* Dark Mode Styles */
+        body.dark-mode {
+            background-color: #333;
+            color: #f7f4e3;
+        }
+
+        h2.dark-mode {
+            color: #d2a96d;
+        }
+
+        p.dark-mode {
+            color: #f7f4e3;
+        }
+
+        .trade-in-process.dark-mode {
+            background-color: #555;
+        }
+
+        .trade-in-process div.dark-mode {
+            color: #f7f4e3;
+        }
+
+        .trade-in-form.dark-mode {
+            background-color: #444;
+        }
+
+        .trade-in-form input,
+        .trade-in-form textarea {
+            background-color: #333;
+            color: #f7f4e3;
+            border-color: #666;
+        }
+
+        .trade-in-form button.dark-mode {
+            background-color: #d2a96d;
+            color: #333;
+        }
+
+        footer.dark-mode {
+            background-color: #333;
+            color: #f7f4e3;
+        }
+
+        footer.dark-mode a {
+            color: #d2a96d;
+        }
+
+        footer.dark-mode a:hover {
+            color: #8e6a3d;
+        }
+
+        /* Button Styling */
+        .toggle-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px;
+            background-color: #8e6a3d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .toggle-btn:hover {
+            background-color: #d2a96d;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Dark Mode Toggle Button -->
+    <button onclick="toggleDarkMode()" class="toggle-btn">Toggle Dark Mode</button>
+
+    <img src="imagegroup/tradein.png" width="100%" alt="Monoloque Contact">
+<br>
+<a href="index.html"><img src="imagegrouping/home.png" width="10%" length="10%" align="left" alt="Home"></a>
+<br>
+<br>
+    <!-- Trade-In Process Section -->
+    <div class="trade-in-process">
+        <div>
+            <img src="imagegrouping/pack.png" alt="Gather your items in good condition">
+            <h3>Step 1</h3>
+            <p>Gather the item(s) you want to trade in. Make sure they're in good condition and meet our trade-in criteria.</p>
+        </div>
+        <div>
+            <img src="imagegrouping/form.png" alt="Fill out the trade-in form">
+            <h3>Step 2</h3>
+            <p>Fill out the form below with your item details. Include photos for faster processing!</p>
+        </div>
+        <div>
+            <img src="imagegrouping/discount.png" alt="Receive store credit or discount">
+            <h3>Step 3</h3>
+            <p>Once we review your item, you'll receive store credit or a discount on future purchases. Simple!</p>
+        </div>
+    </div>
+
+    <!-- Trade-In Form Section -->
+    <div class="trade-in-form">
+        <h3>Submit Your Item for Trade-In</h3>
+        <form action="#" method="post">
+            <input type="text" name="item-name" placeholder="Item Name (e.g., Adidas Jacket)" required>
+            <input type="text" name="item-condition" placeholder="Condition (e.g., Like New, Gently Used)" required>
+            <textarea name="item-description" placeholder="Item Description (e.g., Brand, Size, Features)" required></textarea>
+            <input type="file" name="item-photo" accept="image/*" required>
+            <button type="submit">Submit Trade-In</button>
+        </form>
+    </div>
+
+     <footer>
+        &copy; 2025 Monoloque Thrift. All Rights Reserved. <br>
+        Email: <a href="mailto:monoloquethrift@gmail.com">monoloquethrift@gmail.com</a>
+    </footer>
+
+    <script>
+
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            document.body.classList.add('dark-mode');
+            document.querySelectorAll('.trade-in-process').forEach((item) => item.classList.add('dark-mode'));
+            document.querySelectorAll('.trade-in-form').forEach((item) => item.classList.add('dark-mode'));
+            document.querySelector('footer').classList.add('dark-mode');
+        }
+
+
+        function toggleDarkMode() {
+            const isDarkMode = document.body.classList.toggle('dark-mode');
+            document.querySelectorAll('.trade-in-process').forEach((item) => item.classList.toggle('dark-mode'));
+            document.querySelectorAll('.trade-in-form').forEach((item) => item.classList.toggle('dark-mode'));
+            document.querySelector('footer').classList.toggle('dark-mode');
+
+
+            if (isDarkMode) {
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                localStorage.removeItem('darkMode');
+            }
+        }
+    </script>
+
+</body>
+
+</html>
