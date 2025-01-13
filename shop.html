@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thrift Store - Men's Shirts</title>
+    <style>
+        body {
+            background: #D4D1CD;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            color: black;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin: 20px 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+            color: #5A4D41;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin: 20px auto;
+            max-width: 800px;
+        }
+
+        .section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 30px auto;
+            padding: 20px;
+            max-width: 900px;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+            background: #9e9d9c;
+        }
+
+        .section:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .section img {
+            width: 45%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .section img:hover {
+            transform: scale(1.05);
+        }
+
+        .section .content {
+            width: 50%;
+            padding: 15px;
+            text-align: left;
+        }
+
+        .section .content p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #3a3232;
+        }
+
+        .section .content p span {
+            font-weight: bold;
+            color: #000;
+        }
+
+        .product-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 40px auto;
+        }
+
+        .product-item {
+            width: 250px;
+            margin: 20px;
+            background: #f3e8d3;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .product-item img {
+            width: 100%;
+            height: auto;
+            border-bottom: 2px solid #ccc;
+        }
+
+        .product-item:hover {
+            transform: scale(1.05);
+        }
+
+        .product-item .info {
+            padding: 15px;
+        }
+
+        .product-item h3 {
+            font-size: 1.5rem;
+            color: #5A4D41;
+            margin: 10px 0;
+        }
+
+        .product-item p {
+            font-size: 1.2rem;
+            color: #3a3232;
+        }
+
+        .product-item .price {
+            font-weight: bold;
+            color: #8e6a3d;
+        }
+
+        footer {
+            margin-top: 30px;
+            padding: 15px 0;
+            background: #BBB6B1;
+            color: white;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: gold;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+            color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Men's Shirts Collection</h2>
+    <p>Explore our curated collection of stylish men's thrift shirts, featuring vintage and classic designs, all at affordable prices. Check out our range of shirts below!</p>
+
+    <div class="product-gallery">
+        <!-- Product 1 -->
+        <div class="product-item">
+            <img src="imagegroup/product1.jpg" alt="Vintage Checkered Shirt">
+            <div class="info">
+                <h3>Vintage Checkered Shirt</h3>
+                <p>Classic retro style, perfect for casual outings.</p>
+                <p class="price">$29.99</p>
+            </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-item">
+            <img src="imagegroup/product2.jpg" alt="Slim Fit Blue Shirt">
+            <div class="info">
+                <h3>Slim Fit Blue Shirt</h3>
+                <p>A perfect blend of modern style and comfort.</p>
+                <p class="price">$34.99</p>
+            </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-item">
+            <img src="imagegroup/product3.jpg" alt="Linen Shirt">
+            <div class="info">
+                <h3>Linen Shirt</h3>
+                <p>Breathable and light, ideal for warm weather.</p>
+                <p class="price">$24.99</p>
+            </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-item">
+            <img src="imagegroup/product4.jpg" alt="Striped Casual Shirt">
+            <div class="info">
+                <h3>Striped Casual Shirt</h3>
+                <p>Casual and stylish, perfect for every day.</p>
+                <p class="price">$19.99</p>
+            </div>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product-item">
+            <img src="imagegroup/product5.jpg" alt="Vintage Denim Shirt">
+            <div class="info">
+                <h3>Vintage Denim Shirt</h3>
+                <p>Denim shirt with a timeless, rugged look.</p>
+                <p class="price">$39.99</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 Thrift Store. For inquiries, email <a href="mailto:thriftstore@example.com">thriftstore@example.com</a>
+    </footer>
+
+</body>
+
+</html>
